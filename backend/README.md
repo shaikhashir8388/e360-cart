@@ -321,12 +321,12 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-**Built with ❤️ by [Your Name]**  
+**Built with ❤️ by [M Ashir]**  
 **Version**: 1.0.0  
 **Last Updated**: December 2024
 
 ## 📞 Contact
 
-- **Email**: your-email@example.com
-- **GitHub**: your-github-username
-- **LinkedIn**: your-linkedin-profile
+- **Email**: shaikhashir871@gmail.com
+- **GitHub**: https://github.com/shaikhashir8388/
+- **LinkedIn**: https://www.linkedin.com/in/ashir-shaikh-482244245/
