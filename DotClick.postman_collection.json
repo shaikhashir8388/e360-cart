@@ -1,0 +1,600 @@
+{
+	"info": {
+		"_postman_id": "c2b6e0c9-200d-4db6-aae2-56ed1c18afa8",
+		"name": "DotClick",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27708858"
+	},
+	"item": [
+		{
+			"name": "userRegister",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "{",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "\"username\"",
+							"value": " \"ashir_dev\",",
+							"type": "text"
+						},
+						{
+							"key": "\"email\"",
+							"value": " \"ashir@example.com\",",
+							"type": "text"
+						},
+						{
+							"key": "\"password\"",
+							"value": " \"StrongP@ssw0rd\",",
+							"type": "text"
+						},
+						{
+							"key": "\"confirmPassword\"",
+							"value": " \"StrongP@ssw0rd\",",
+							"type": "text"
+						},
+						{
+							"key": "\"phone\"",
+							"value": " \"+1234567890\",",
+							"type": "text"
+						},
+						{
+							"key": "}",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"ashir@example.com\",\r\n\"password\": \"StrongP@ssw0rd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adminCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"shaikhashirdev\",\r\n  \"email\": \"shaikhashir113@gmail.com\",\r\n  \"phone\": \"+92300223222\",\r\n  \"password\": \"Shaikh0987*6!\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/create-admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"create-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adminLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \"email\": \"shaikhashir113@gmail.com\",\r\n  \"password\": \"Shaikh0987*6!\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/admin/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGQyNzViMjQwMmU5MTJiZGIwZGQxY2MiLCJlbWFpbCI6InNoYWlraGFzaGlyMTEzQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1ODYyMzI4NiwiZXhwIjoxNzU5MjI4MDg2LCJhdWQiOiJzaG9waHViLWNsaWVudCIsImlzcyI6InNob3BodWItYXBpIn0.Fe-sTXP8fkoQgK-SAYzpVn4gtIqITAZ0fq2VKOTM4pI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Nike Air Max",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Comfortable running sneakers",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "101",
+							"type": "text"
+						},
+						{
+							"key": "colour",
+							"value": " Black",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "md",
+							"type": "text"
+						},
+						{
+							"key": "totalStock",
+							"value": "150",
+							"type": "text"
+						},
+						{
+							"key": "inStock",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "shoes,sports,running",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGQyNzViMjQwMmU5MTJiZGIwZGQxY2MiLCJlbWFpbCI6InNoYWlraGFzaGlyMTEzQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1ODYyMzI4NiwiZXhwIjoxNzU5MjI4MDg2LCJhdWQiOiJzaG9waHViLWNsaWVudCIsImlzcyI6InNob3BodWItYXBpIn0.Fe-sTXP8fkoQgK-SAYzpVn4gtIqITAZ0fq2VKOTM4pI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductbySlug",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGQyNzViMjQwMmU5MTJiZGIwZGQxY2MiLCJlbWFpbCI6InNoYWlraGFzaGlyMTEzQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1ODYyMzI4NiwiZXhwIjoxNzU5MjI4MDg2LCJhdWQiOiJzaG9waHViLWNsaWVudCIsImlzcyI6InNob3BodWItYXBpIn0.Fe-sTXP8fkoQgK-SAYzpVn4gtIqITAZ0fq2VKOTM4pI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": " Nike Air Max",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": " Comfortable running sneakers",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": " 99.99",
+							"type": "text"
+						},
+						{
+							"key": "colour",
+							"value": " Black",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": " md",
+							"type": "text"
+						},
+						{
+							"key": "totalStock",
+							"value": " 150",
+							"type": "text"
+						},
+						{
+							"key": "inStock",
+							"value": " true",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": " shoes,sports,running",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"value": " (upload file)",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products/hi202522478",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"hi202522478"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addItemtoCart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGQyNzViMjQwMmU5MTJiZGIwZGQxY2MiLCJlbWFpbCI6InNoYWlraGFzaGlyMTEzQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1ODYyMzI4NiwiZXhwIjoxNzU5MjI4MDg2LCJhdWQiOiJzaG9waHViLWNsaWVudCIsImlzcyI6InNob3BodWItYXBpIn0.Fe-sTXP8fkoQgK-SAYzpVn4gtIqITAZ0fq2VKOTM4pI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": \"68d1d266b413066b050cadc5\",\r\n  \"quantity\": 2,\r\n  \"selectedColour\": \"Blue\",\r\n  \"selectedSize\": \"md\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/cart/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"cart",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCartitem",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGQyNzViMjQwMmU5MTJiZGIwZGQxY2MiLCJlbWFpbCI6InNoYWlraGFzaGlyMTEzQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1ODYyMzI4NiwiZXhwIjoxNzU5MjI4MDg2LCJhdWQiOiJzaG9waHViLWNsaWVudCIsImlzcyI6InNob3BodWItYXBpIn0.Fe-sTXP8fkoQgK-SAYzpVn4gtIqITAZ0fq2VKOTM4pI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/cart/item/68d27d45e2937e4a5cf16b55",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"cart",
+						"item",
+						"68d27d45e2937e4a5cf16b55"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "processCheckout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGQyNzViMjQwMmU5MTJiZGIwZGQxY2MiLCJlbWFpbCI6InNoYWlraGFzaGlyMTEzQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1ODYyMzI4NiwiZXhwIjoxNzU5MjI4MDg2LCJhdWQiOiJzaG9waHViLWNsaWVudCIsImlzcyI6InNob3BodWItYXBpIn0.Fe-sTXP8fkoQgK-SAYzpVn4gtIqITAZ0fq2VKOTM4pI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"shippingAddress\": {\r\n    \"fullName\": \"John Doe\",\r\n    \"email\": \"john@example.com\",\r\n    \"phone\": \"+1234567890\",\r\n    \"address\": \"123 Main Street, Apt 4B\",\r\n    \"city\": \"New York\",\r\n    \"state\": \"NY\",\r\n    \"zipCode\": \"10001\",\r\n    \"country\": \"United States\"\r\n  },\r\n  \"paymentMethod\": \"stripe\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/checkout/process",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"checkout",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserOrders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGQyNzViMjQwMmU5MTJiZGIwZGQxY2MiLCJlbWFpbCI6InNoYWlraGFzaGlyMTEzQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1ODYyMzI4NiwiZXhwIjoxNzU5MjI4MDg2LCJhdWQiOiJzaG9waHViLWNsaWVudCIsImlzcyI6InNob3BodWItYXBpIn0.Fe-sTXP8fkoQgK-SAYzpVn4gtIqITAZ0fq2VKOTM4pI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/checkout/orders/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"checkout",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrdersbyNumber",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGQyNzViMjQwMmU5MTJiZGIwZGQxY2MiLCJlbWFpbCI6InNoYWlraGFzaGlyMTEzQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1ODYyMzI4NiwiZXhwIjoxNzU5MjI4MDg2LCJhdWQiOiJzaG9waHViLWNsaWVudCIsImlzcyI6InNob3BodWItYXBpIn0.Fe-sTXP8fkoQgK-SAYzpVn4gtIqITAZ0fq2VKOTM4pI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"shippingAddress\": {\r\n    \"fullName\": \"John Doe\",\r\n    \"email\": \"john@example.com\",\r\n    \"phone\": \"+1234567890\",\r\n    \"address\": \"123 Main Street, Apt 4B\",\r\n    \"city\": \"New York\",\r\n    \"state\": \"NY\",\r\n    \"zipCode\": \"10001\",\r\n    \"country\": \"United States\"\r\n  },\r\n  \"paymentMethod\": \"stripe\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/checkout/orders/2223132111332",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"checkout",
+						"orders",
+						"2223132111332"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
