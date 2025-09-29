@@ -1,6 +1,6 @@
-import { Product, User } from './types';
+import { ProductLegacy, UserLegacy } from './types';
 
-export const mockProducts: Product[] = [
+export const mockProducts: ProductLegacy[] = [
   {
     id: '1',
     name: 'Premium Cotton T-Shirt',
@@ -111,7 +111,7 @@ export const mockProducts: Product[] = [
   },
 ];
 
-export const mockUsers: User[] = [
+export const mockUsers: UserLegacy[] = [
   {
     id: '1',
     username: 'admin',
