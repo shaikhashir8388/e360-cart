@@ -216,7 +216,7 @@ export default function Home() {
                   
                   <div className="flex space-x-1">
                     {Array.from({ length: Math.min(pagination.pages, 5) }, (_, i) => {
-                      let page;
+                      let page: number;
                       if (pagination.pages <= 5) {
                         page = i + 1;
                       } else {
